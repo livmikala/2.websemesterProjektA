@@ -1,21 +1,20 @@
 <template>
- <div>
+ <div class="scoreboard">
     <h2>Tennis Score</h2>
-    <p>Spiller 1: {{ player1 }}</p>
-    <p>Spiller 2: {{ player2 }}</p>
-    <p v-if="winner">Resultat: {{ winner }}</p>
-    <ScoreButton label="+1 Spiller 1" :disabled="gameOver" @add-point="addPointPlayer1"/>
-    <ScoreButton label="+1 Spiller 2" :disabled="gameOver" @add-point="addPointPlayer2"/>
-    <ScoreButton label="Reset" @add-point="resetGame"/>
     <ScoreDisplay playerName="Spiller 1" :score="player1"/>
     <ScoreDisplay playerName="Spiller 2" :score="player2"/>
+    <ScoreButton label="Spiller 1" :disabled="gameOver" @add-point="addPointPlayer1"/>
+    <ScoreButton label="Spiller 2" :disabled="gameOver" @add-point="addPointPlayer2"/>
+    <ScoreButton label="Reset" @add-point="resetGame"/>
+    <p v-if="winner">Resultat: {{ winner }}</p>
  </div>
 </template>
 <script>
 import ScoreButton from './ScoreButton.vue'
+import ScoreDisplay from './ScoreDisplay.vue';
 
 export default {
-    components: { ScoreButton },
+    components: { ScoreButton, ScoreDisplay },
     data () {
       return {
         player1: 0,
