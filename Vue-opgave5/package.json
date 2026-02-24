@@ -1,0 +1,18 @@
+{
+  "name": "vue-opgave5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "vite": "^7.3.1",
+    "vue": "^3.5.29"
+  }
+}
