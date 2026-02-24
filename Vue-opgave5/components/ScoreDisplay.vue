@@ -1,21 +1,21 @@
 <template>
-    <div>
-        <p>Spiller 1: {{ score1 }}</p>
-        <p>Spiller 2: {{ score2 }}</p>
-        <p>{{ message }}</p>
-    </div>
+  <div class="score-display">
+    <p>{{ playerName }}: {{ score }}</p>
+  </div>
 </template>
 
 <script>
 export default {
-    props: {
-        score1: Number,
-        score2: Number,
-        message: String
-    }
+  props: {
+    playerName: String,
+    score: Number
+  }
 }
 </script>
 
-<style>
-p { font-size: 18px; }
+<style scoped>
+.score-display {
+  font-size: 20px;
+  margin: 10px 0;
+}
 </style>

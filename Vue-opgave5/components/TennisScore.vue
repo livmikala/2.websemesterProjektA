@@ -7,6 +7,8 @@
     <ScoreButton label="+1 Spiller 1" :disabled="gameOver" @add-point="addPointPlayer1"/>
     <ScoreButton label="+1 Spiller 2" :disabled="gameOver" @add-point="addPointPlayer2"/>
     <ScoreButton label="Reset" @add-point="resetGame"/>
+    <ScoreDisplay playerName="Spiller 1" :score="player1"/>
+    <ScoreDisplay playerName="Spiller 2" :score="player2"/>
  </div>
 </template>
 <script>
