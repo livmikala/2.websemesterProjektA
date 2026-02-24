@@ -1,24 +1,23 @@
 <template>
-    <div>
-<ScoreButton
-label="+1 Spiller 1"
-:disabled="gameOver"
-@add-point="addPointPlayer1"
-/>
+<div>
+ <ScoreButton
+  label="+1 Spiller 1"
+  :disabled="gameOver"
+  @add-point="addPointPlayer1"
+  />
 
-<ScoreButton
-label="+1 Spiller 2"
-:disabled="gameOver"
-@add-point="addPointPlayer2"
-/>
+ <ScoreButton
+  label="+1 Spiller 2"
+  :disabled="gameOver"
+  @add-point="addPointPlayer2"
+  />
 
-<ScoreButton
-label="Reset"
-@add-point="resetGame"
-/>
-    </div>
+ <ScoreButton
+  label="Reset"
+  @add-point="resetGame"
+ />
+</div>
 </template>
-
 <script>
 import ScoreButton from './ScoreButton.vue'
 
