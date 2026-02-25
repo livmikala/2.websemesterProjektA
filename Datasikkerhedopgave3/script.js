@@ -15,7 +15,6 @@ const loginRes = await fetch('http://localhost:3000/login', {
 });
 
 const loginData = await loginRes.json();
-
 if (loginRes.status !== 200) {
     alert(loginData.message);
     return;

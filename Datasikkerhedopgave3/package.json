@@ -1,0 +1,25 @@
+{
+  "name": "2.websemesterprojekta",
+  "version": "1.0.0",
+  "description": "Semester 2 opgave 3 + 5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livmikala/2.websemesterProjektA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/livmikala/2.websemesterProjektA/issues"
+  },
+  "homepage": "https://github.com/livmikala/2.websemesterProjektA#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "express": "^5.2.1"
+  }
+}
