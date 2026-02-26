@@ -1,11 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const cors = require('cors');
+
 
 const app = express();
-app.use(cors());
+
 app.use(bodyParser.json());
+app.use(express.static(__dirname));
 
 let users = JSON.parse(fs.readFileSync('users.json'));
 let tempOTPs = {};
@@ -35,6 +36,10 @@ app.post('/verify-otp', (req, res) => {
 
     record.used = true;
     res.json({ message: 'Login lykkedes'});
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/login.html');
 });
 
 app.listen(3000, () => console.log('Server kører på http://localhost:3000'));
